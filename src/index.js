@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const root=ReactDOM.createRoot(document.getElementById('root'));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const myFirstElement=<div>
+                        <table>
+                          <tr>
+                             <td colspan="3">
+                             <h1> Hello React</h1>
+                             </td>
+                          </tr>
+                          <tr>
+                            <td colSpan={3}>
+                            <p>this is my first paragraph but how to append it without overwriting the root?</p>
+                            </td>
+                          </tr>  
+                          <tr>
+                            <td>Name:</td><td><input type={'text'}></input></td><td>Mobile Number:</td><td><input type={'tel'}></input></td>
+                          </tr>  
+                          <tr>
+                          <td></td> <td></td> <td></td> <td><input type='button' id='btn_save' ></input> </td>
+                          </tr>
+                        </table>
+                    </div>
+root.render(myFirstElement);
+//root.render(mySecondElement);

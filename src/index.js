@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 const root=ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Car color='red'/>);
-//root.render(mySecondElement);
-//Car class
+//class component 
+class Car extends React.Component{
+  render(){
+    return <h2>Hi, i am a Car!</h2>
+  }
+}
+
+
